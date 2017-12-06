@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Git</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+ 
+<body>
+<div class="container">
+    <h2>Github</h2>
+    
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Self Repositories</a></li>
+    <li><a data-toggle="tab" href="#menu1">Shared Repository</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active" style="padding: 20px;">
+        <div class="form-group">
+          <label for="usr">Username:</label>
+          <input type="text" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" id="submit_button">Get Repo</button>
+        </div>
+
+        <hr>
+        <div class="row">
+            <table class="table table-striped" id="result_table1">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Full Name</th>
+                <th>URL</th>
+              </tr>
+            </thead>
+            <tbody id="result_table1_body">
+              
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="menu1" class="tab-pane fade" style="padding: 20px;">
+        <div class="form-group">
+          <label for="usr">Username:</label>
+          <input type="text" class="form-control" id="shared_username">
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" id="shared_submit_button">Get Repo</button>
+        </div>
+
+        <hr>
+        <div class="row">
+            <table class="table table-striped" id="result_table2">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Full Name</th>
+                <th>URL</th>
+              </tr>
+            </thead>
+            <tbody id="result_table2_body">
+              
+            </tbody>
+            </table>
+    </div>
+  </div>
+    
+</div>
+</body>
+
+</html>
+
